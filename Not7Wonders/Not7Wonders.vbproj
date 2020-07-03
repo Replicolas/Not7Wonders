@@ -1,0 +1,1294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07AC5A4E-CA91-4997-8021-AD3418828B70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Not7Wonders.Start</StartupObject>
+    <RootNamespace>Not7Wonders</RootNamespace>
+    <AssemblyName>Not7Wonders</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Not7Wonders.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Not7Wonders.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Buildings\BuildingCardPlayerBoardUC.Designer.vb">
+      <DependentUpon>BuildingCardPlayerBoardUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Buildings\BuildingCardPlayerBoardUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Buildings\ThirdAgeBuildingManager.vb" />
+    <Compile Include="Classes\Buildings\SecondAgeBuildingManager.vb" />
+    <Compile Include="Classes\Marvels\MarvelCard.vb" />
+    <Compile Include="Classes\Marvels\MarvelCardPlayerBoardUC.Designer.vb">
+      <DependentUpon>MarvelCardPlayerBoardUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Marvels\MarvelCardPlayerBoardUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Player\GoldPlayerBoardUC.Designer.vb">
+      <DependentUpon>GoldPlayerBoardUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Player\GoldPlayerBoardUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Player\ItemPickUC.Designer.vb">
+      <DependentUpon>ItemPickUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Player\ItemPickUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Player\ItemPlayerBoardUC.Designer.vb">
+      <DependentUpon>ItemPlayerBoardUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Player\ItemPlayerBoardUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Player\MilitaryCoinUC.Designer.vb">
+      <DependentUpon>MilitaryCoinUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Player\MilitaryCoinUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Player\PlayerBoard.Designer.vb">
+      <DependentUpon>PlayerBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Player\PlayerBoard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Player\SymbolPlayerBoardUC.Designer.vb">
+      <DependentUpon>SymbolPlayerBoardUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Player\SymbolPlayerBoardUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Science\ScienceCardPickUC.Designer.vb">
+      <DependentUpon>ScienceCardPickUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Science\ScienceCardPickUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Science\ScienceCardPlayerBoardUC.Designer.vb">
+      <DependentUpon>ScienceCardPlayerBoardUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Science\ScienceCardPlayerBoardUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Science\ScienceManager.vb" />
+    <Compile Include="Classes\Science\ScienceCard.vb" />
+    <Compile Include="Forms\ActionForm.Designer.vb">
+      <DependentUpon>ActionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ActionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardPick.Designer.vb">
+      <DependentUpon>CardPick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CardPick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PickPlayer.Designer.vb">
+      <DependentUpon>PickPlayer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PickPlayer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SciencePick.Designer.vb">
+      <DependentUpon>SciencePick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SciencePick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EndGame.Designer.vb">
+      <DependentUpon>EndGame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EndGame.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemPick.Designer.vb">
+      <DependentUpon>ItemPick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ItemPick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MarvelPick.Designer.vb">
+      <DependentUpon>MarvelPick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MarvelPick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Start.Designer.vb">
+      <DependentUpon>Start.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Start.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Marvels\MarvelCardPickUC.Designer.vb">
+      <DependentUpon>MarvelCardPickUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Marvels\MarvelCardPickUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\AgricultureCoin.Designer.vb">
+      <DependentUpon>AgricultureCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\AgricultureCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\ArchitectureCoin.Designer.vb">
+      <DependentUpon>ArchitectureCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\ArchitectureCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\EconomyCoin.Designer.vb">
+      <DependentUpon>EconomyCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\EconomyCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\LawCoin.Designer.vb">
+      <DependentUpon>LawCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\LawCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\MasonryCoin.Designer.vb">
+      <DependentUpon>MasonryCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\MasonryCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\MathematicsCoin.Designer.vb">
+      <DependentUpon>MathematicsCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\MathematicsCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\Military2Coin.Designer.vb">
+      <DependentUpon>Military2Coin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\Military2Coin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\Military5Coin.Designer.vb">
+      <DependentUpon>Military5Coin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\Military5Coin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\ClayCostIcon.Designer.vb">
+      <DependentUpon>ClayCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\ClayCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\GlassCostIcon.Designer.vb">
+      <DependentUpon>GlassCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\GlassCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\GoldCostIcon.Designer.vb">
+      <DependentUpon>GoldCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\GoldCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\PaperCostIcon.Designer.vb">
+      <DependentUpon>PaperCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\PaperCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\StoneCostIcon.Designer.vb">
+      <DependentUpon>StoneCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\StoneCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\WoodCostIcon.Designer.vb">
+      <DependentUpon>WoodCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Cost Icons\WoodCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\BlueCardGoldVictoryGainIcon.Designer.vb">
+      <DependentUpon>BlueCardGoldVictoryGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\BlueCardGoldVictoryGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\ClayGainIcon.Designer.vb">
+      <DependentUpon>ClayGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\ClayGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\GlassGainIcon.Designer.vb">
+      <DependentUpon>GlassGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\GlassGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\GoldVictoryGainIcon.Designer.vb">
+      <DependentUpon>GoldVictoryGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\GoldVictoryGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\GreenCardGoldVictoryGainIcon.Designer.vb">
+      <DependentUpon>GreenCardGoldVictoryGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\GreenCardGoldVictoryGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\GreyBrownCardGoldVictoryGainIcon.Designer.vb">
+      <DependentUpon>GreyBrownCardGoldVictoryGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\GreyBrownCardGoldVictoryGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\MarvelVictoryGainIcon.Designer.vb">
+      <DependentUpon>MarvelVictoryGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\MarvelVictoryGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\GoldGainIcon.Designer.vb">
+      <DependentUpon>GoldGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\GoldGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\PaperGainIcon.Designer.vb">
+      <DependentUpon>PaperGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\PaperGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\RedCardGoldVictoryGainIcon.Designer.vb">
+      <DependentUpon>RedCardGoldVictoryGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\RedCardGoldVictoryGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\ShieldGainIcon.Designer.vb">
+      <DependentUpon>ShieldGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\ShieldGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\StoneGainIcon.Designer.vb">
+      <DependentUpon>StoneGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\StoneGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\VictoryGainIcon.Designer.vb">
+      <DependentUpon>VictoryGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\VictoryGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\WoodGainIcon.Designer.vb">
+      <DependentUpon>WoodGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Ressources Gain Icons\WoodGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\YellowCardGoldVictoryGainIcon.Designer.vb">
+      <DependentUpon>YellowCardGoldVictoryGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Guild Gain Icons\YellowCardGoldVictoryGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Item Icons\BalanceIcon.Designer.vb">
+      <DependentUpon>BalanceIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Item Icons\BalanceIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Item Icons\GlobeIcon.Designer.vb">
+      <DependentUpon>GlobeIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Item Icons\GlobeIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Item Icons\MortarIcon.Designer.vb">
+      <DependentUpon>MortarIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Item Icons\MortarIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Item Icons\PendulumIcon.Designer.vb">
+      <DependentUpon>PendulumIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Item Icons\PendulumIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Item Icons\SundialIcon.Designer.vb">
+      <DependentUpon>SundialIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Item Icons\SundialIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Item Icons\WheelIcon.Designer.vb">
+      <DependentUpon>WheelIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Item Icons\WheelIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\PhilosophyCoin.Designer.vb">
+      <DependentUpon>PhilosophyCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\PhilosophyCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\StrategyCoin.Designer.vb">
+      <DependentUpon>StrategyCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\StrategyCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\TheologyCoin.Designer.vb">
+      <DependentUpon>TheologyCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\TheologyCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Board Icons\UrbanismCoin.Designer.vb">
+      <DependentUpon>UrbanismCoin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Board Icons\UrbanismCoin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\BrownCardGoldGainIcon.Designer.vb">
+      <DependentUpon>BrownCardGoldGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\BrownCardGoldGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\ClayRuleUpdateIcon.Designer.vb">
+      <DependentUpon>ClayRuleUpdateIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\ClayRuleUpdateIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\ClayStoneWoodGainIcon.Designer.vb">
+      <DependentUpon>ClayStoneWoodGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\ClayStoneWoodGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\GlassPaperGainIcon.Designer.vb">
+      <DependentUpon>GlassPaperGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\GlassPaperGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\GreyCardGoldGainIcon.Designer.vb">
+      <DependentUpon>GreyCardGoldGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\GreyCardGoldGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\MarvelGoldGainIcon.Designer.vb">
+      <DependentUpon>MarvelGoldGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\MarvelGoldGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\PaperGlassRuleUpdateIcon.Designer.vb">
+      <DependentUpon>PaperGlassRuleUpdateIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\PaperGlassRuleUpdateIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\RedCardGoldGainIcon.Designer.vb">
+      <DependentUpon>RedCardGoldGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\RedCardGoldGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\StoneRuleUpdateIcon.Designer.vb">
+      <DependentUpon>StoneRuleUpdateIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\StoneRuleUpdateIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\WoodRuleUpdateIcon.Designer.vb">
+      <DependentUpon>WoodRuleUpdateIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\WoodRuleUpdateIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\YellowCardGoldGainIcon.Designer.vb">
+      <DependentUpon>YellowCardGoldGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Special Gain Icons\YellowCardGoldGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\AmphoraCostIcon.Designer.vb">
+      <DependentUpon>AmphoraCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\AmphoraCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\BarrelCostIcon.Designer.vb">
+      <DependentUpon>BarrelCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\BarrelCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\BookCostIcon.Designer.vb">
+      <DependentUpon>BookCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\BookCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\DropCostIcon.Designer.vb">
+      <DependentUpon>DropCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\DropCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\GearCostIcon.Designer.vb">
+      <DependentUpon>GearCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\GearCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\HarpCostIcon.Designer.vb">
+      <DependentUpon>HarpCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\HarpCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\HelmetCostIcon.Designer.vb">
+      <DependentUpon>HelmetCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\HelmetCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\HorseshoeCostIcon.Designer.vb">
+      <DependentUpon>HorseshoeCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\HorseshoeCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\LampCostIcon.Designer.vb">
+      <DependentUpon>LampCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\LampCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\MaskCostIcon.Designer.vb">
+      <DependentUpon>MaskCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\MaskCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\MoonCostIcon.Designer.vb">
+      <DependentUpon>MoonCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\MoonCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\PalaceCostIcon.Designer.vb">
+      <DependentUpon>PalaceCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\PalaceCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\PillarCostIcon.Designer.vb">
+      <DependentUpon>PillarCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\PillarCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\SunCostIcon.Designer.vb">
+      <DependentUpon>SunCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\SunCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\SwordCostIcon.Designer.vb">
+      <DependentUpon>SwordCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\SwordCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\TargetCostIcon.Designer.vb">
+      <DependentUpon>TargetCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\TargetCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\TowerCostIcon.Designer.vb">
+      <DependentUpon>TowerCostIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Cost Icons\TowerCostIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\AmphoraGainIcon.Designer.vb">
+      <DependentUpon>AmphoraGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\AmphoraGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\BarrelGainIcon.Designer.vb">
+      <DependentUpon>BarrelGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\BarrelGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\BookGainIcon.Designer.vb">
+      <DependentUpon>BookGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\BookGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\DropGainIcon.Designer.vb">
+      <DependentUpon>DropGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\DropGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\GearGainIcon.Designer.vb">
+      <DependentUpon>GearGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\GearGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\HarpGainIcon.Designer.vb">
+      <DependentUpon>HarpGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\HarpGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\HelmetGainIcon.Designer.vb">
+      <DependentUpon>HelmetGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\HelmetGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\HorseshoeGainIcon.Designer.vb">
+      <DependentUpon>HorseshoeGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\HorseshoeGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\LampGainIcon.Designer.vb">
+      <DependentUpon>LampGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\LampGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\MaskGainIcon.Designer.vb">
+      <DependentUpon>MaskGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\MaskGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\MoonGainIcon.Designer.vb">
+      <DependentUpon>MoonGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\MoonGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\PalaceGainIcon.Designer.vb">
+      <DependentUpon>PalaceGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\PalaceGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\PillarGainIcon.Designer.vb">
+      <DependentUpon>PillarGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\PillarGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\SunGainIcon.Designer.vb">
+      <DependentUpon>SunGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\SunGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\SwordGainIcon.Designer.vb">
+      <DependentUpon>SwordGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\SwordGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\TargetGainIcon.Designer.vb">
+      <DependentUpon>TargetGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\TargetGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\TowerGainIcon.Designer.vb">
+      <DependentUpon>TowerGainIcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Symbol Gain Icons\TowerGainIcon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Buildings\FirstAgeBuildingManager.vb" />
+    <Compile Include="Classes\Buildings\BuildingCardBoardUC.Designer.vb">
+      <DependentUpon>BuildingCardBoardUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Buildings\BuildingCardBoardUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Buildings\BuildingCard.vb" />
+    <Compile Include="Forms\Board.Designer.vb">
+      <DependentUpon>Board.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Board.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Player\Player.vb" />
+    <Compile Include="Modules\GlobalVar.vb" />
+    <Compile Include="Classes\Marvels\MarvelManager.vb" />
+    <Compile Include="Modules\Tools.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Classes\Buildings\BuildingCardPlayerBoardUC.resx">
+      <DependentUpon>BuildingCardPlayerBoardUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Marvels\MarvelCardPlayerBoardUC.resx">
+      <DependentUpon>MarvelCardPlayerBoardUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Player\GoldPlayerBoardUC.resx">
+      <DependentUpon>GoldPlayerBoardUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Player\ItemPickUC.resx">
+      <DependentUpon>ItemPickUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Player\ItemPlayerBoardUC.resx">
+      <DependentUpon>ItemPlayerBoardUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Player\MilitaryCoinUC.resx">
+      <DependentUpon>MilitaryCoinUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Player\PlayerBoard.resx">
+      <DependentUpon>PlayerBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Player\SymbolPlayerBoardUC.resx">
+      <DependentUpon>SymbolPlayerBoardUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Science\ScienceCardPickUC.resx">
+      <DependentUpon>ScienceCardPickUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Science\ScienceCardPlayerBoardUC.resx">
+      <DependentUpon>ScienceCardPlayerBoardUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ActionForm.resx">
+      <DependentUpon>ActionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CardPick.resx">
+      <DependentUpon>CardPick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PickPlayer.resx">
+      <DependentUpon>PickPlayer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SciencePick.resx">
+      <DependentUpon>SciencePick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EndGame.resx">
+      <DependentUpon>EndGame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemPick.resx">
+      <DependentUpon>ItemPick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MarvelPick.resx">
+      <DependentUpon>MarvelPick.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Start.resx">
+      <DependentUpon>Start.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Buildings\BuildingCardBoardUC.resx">
+      <DependentUpon>BuildingCardBoardUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Marvels\MarvelCardPickUC.resx">
+      <DependentUpon>MarvelCardPickUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\AgricultureCoin.resx">
+      <DependentUpon>AgricultureCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\ArchitectureCoin.resx">
+      <DependentUpon>ArchitectureCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\EconomyCoin.resx">
+      <DependentUpon>EconomyCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\LawCoin.resx">
+      <DependentUpon>LawCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\MasonryCoin.resx">
+      <DependentUpon>MasonryCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\MathematicsCoin.resx">
+      <DependentUpon>MathematicsCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\Military2Coin.resx">
+      <DependentUpon>Military2Coin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\Military5Coin.resx">
+      <DependentUpon>Military5Coin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\PhilosophyCoin.resx">
+      <DependentUpon>PhilosophyCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\StrategyCoin.resx">
+      <DependentUpon>StrategyCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\TheologyCoin.resx">
+      <DependentUpon>TheologyCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Board Icons\UrbanismCoin.resx">
+      <DependentUpon>UrbanismCoin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Cost Icons\ClayCostIcon.resx">
+      <DependentUpon>ClayCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Board.resx">
+      <DependentUpon>Board.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Cost Icons\GlassCostIcon.resx">
+      <DependentUpon>GlassCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Cost Icons\GoldCostIcon.resx">
+      <DependentUpon>GoldCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Cost Icons\PaperCostIcon.resx">
+      <DependentUpon>PaperCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Cost Icons\StoneCostIcon.resx">
+      <DependentUpon>StoneCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Cost Icons\WoodCostIcon.resx">
+      <DependentUpon>WoodCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Guild Gain Icons\BlueCardGoldVictoryGainIcon.resx">
+      <DependentUpon>BlueCardGoldVictoryGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Item Icons\BalanceIcon.resx">
+      <DependentUpon>BalanceIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Item Icons\GlobeIcon.resx">
+      <DependentUpon>GlobeIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Item Icons\MortarIcon.resx">
+      <DependentUpon>MortarIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Item Icons\PendulumIcon.resx">
+      <DependentUpon>PendulumIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Item Icons\SundialIcon.resx">
+      <DependentUpon>SundialIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Item Icons\WheelIcon.resx">
+      <DependentUpon>WheelIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Gain Icons\ClayGainIcon.resx">
+      <DependentUpon>ClayGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Gain Icons\GlassGainIcon.resx">
+      <DependentUpon>GlassGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Guild Gain Icons\GoldVictoryGainIcon.resx">
+      <DependentUpon>GoldVictoryGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Guild Gain Icons\GreenCardGoldVictoryGainIcon.resx">
+      <DependentUpon>GreenCardGoldVictoryGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Guild Gain Icons\GreyBrownCardGoldVictoryGainIcon.resx">
+      <DependentUpon>GreyBrownCardGoldVictoryGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Guild Gain Icons\MarvelVictoryGainIcon.resx">
+      <DependentUpon>MarvelVictoryGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Gain Icons\GoldGainIcon.resx">
+      <DependentUpon>GoldGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Gain Icons\PaperGainIcon.resx">
+      <DependentUpon>PaperGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Guild Gain Icons\RedCardGoldVictoryGainIcon.resx">
+      <DependentUpon>RedCardGoldVictoryGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Gain Icons\ShieldGainIcon.resx">
+      <DependentUpon>ShieldGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Gain Icons\StoneGainIcon.resx">
+      <DependentUpon>StoneGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Gain Icons\VictoryGainIcon.resx">
+      <DependentUpon>VictoryGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Ressources Gain Icons\WoodGainIcon.resx">
+      <DependentUpon>WoodGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Guild Gain Icons\YellowCardGoldVictoryGainIcon.resx">
+      <DependentUpon>YellowCardGoldVictoryGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\BrownCardGoldGainIcon.resx">
+      <DependentUpon>BrownCardGoldGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\ClayRuleUpdateIcon.resx">
+      <DependentUpon>ClayRuleUpdateIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\ClayStoneWoodGainIcon.resx">
+      <DependentUpon>ClayStoneWoodGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\GlassPaperGainIcon.resx">
+      <DependentUpon>GlassPaperGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\GreyCardGoldGainIcon.resx">
+      <DependentUpon>GreyCardGoldGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\MarvelGoldGainIcon.resx">
+      <DependentUpon>MarvelGoldGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\PaperGlassRuleUpdateIcon.resx">
+      <DependentUpon>PaperGlassRuleUpdateIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\RedCardGoldGainIcon.resx">
+      <DependentUpon>RedCardGoldGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\StoneRuleUpdateIcon.resx">
+      <DependentUpon>StoneRuleUpdateIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\WoodRuleUpdateIcon.resx">
+      <DependentUpon>WoodRuleUpdateIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Special Gain Icons\YellowCardGoldGainIcon.resx">
+      <DependentUpon>YellowCardGoldGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\AmphoraCostIcon.resx">
+      <DependentUpon>AmphoraCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\BarrelCostIcon.resx">
+      <DependentUpon>BarrelCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\BookCostIcon.resx">
+      <DependentUpon>BookCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\DropCostIcon.resx">
+      <DependentUpon>DropCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\GearCostIcon.resx">
+      <DependentUpon>GearCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\HarpCostIcon.resx">
+      <DependentUpon>HarpCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\HelmetCostIcon.resx">
+      <DependentUpon>HelmetCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\HorseshoeCostIcon.resx">
+      <DependentUpon>HorseshoeCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\LampCostIcon.resx">
+      <DependentUpon>LampCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\MaskCostIcon.resx">
+      <DependentUpon>MaskCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\MoonCostIcon.resx">
+      <DependentUpon>MoonCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\PalaceCostIcon.resx">
+      <DependentUpon>PalaceCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\PillarCostIcon.resx">
+      <DependentUpon>PillarCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\SunCostIcon.resx">
+      <DependentUpon>SunCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\SwordCostIcon.resx">
+      <DependentUpon>SwordCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\TargetCostIcon.resx">
+      <DependentUpon>TargetCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Cost Icons\TowerCostIcon.resx">
+      <DependentUpon>TowerCostIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\AmphoraGainIcon.resx">
+      <DependentUpon>AmphoraGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\BarrelGainIcon.resx">
+      <DependentUpon>BarrelGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\BookGainIcon.resx">
+      <DependentUpon>BookGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\DropGainIcon.resx">
+      <DependentUpon>DropGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\GearGainIcon.resx">
+      <DependentUpon>GearGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\HarpGainIcon.resx">
+      <DependentUpon>HarpGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\HelmetGainIcon.resx">
+      <DependentUpon>HelmetGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\HorseshoeGainIcon.resx">
+      <DependentUpon>HorseshoeGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\LampGainIcon.resx">
+      <DependentUpon>LampGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\MaskGainIcon.resx">
+      <DependentUpon>MaskGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\MoonGainIcon.resx">
+      <DependentUpon>MoonGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\PalaceGainIcon.resx">
+      <DependentUpon>PalaceGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\PillarGainIcon.resx">
+      <DependentUpon>PillarGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\SunGainIcon.resx">
+      <DependentUpon>SunGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\SwordGainIcon.resx">
+      <DependentUpon>SwordGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\TargetGainIcon.resx">
+      <DependentUpon>TargetGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Symbol Gain Icons\TowerGainIcon.resx">
+      <DependentUpon>TowerGainIcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Victory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Balance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Solardial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pendulum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mortar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarvelGoldGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedCardGoldGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowCardGoldGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrownCardGoldGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreyCardGoldGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Moon.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pillar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drop.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sun.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Palace.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mask.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amphora.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barrel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lamp.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Harp.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tower.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sword.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Horseshoe.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Helmet.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Target.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoldVictoryGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarvelVictoryGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenCardGoldVictoryGainIcon.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedCardGoldVictoryGainIcon.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueCardGoldVictoryGainIcon.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowCardGoldVictoryGainIcon.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreyBrownCardGoldVictoryGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaperGlassRuleUpdate.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClayRuleUpdate.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StoneRuleUpdate.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WoodRuleUpdate.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rule.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GlassPaperGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClayStoneWoodGain.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Philosophy.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mathematics.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strategy.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Urbanism.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Theology.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Masonry.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Law.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Economy.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Architecture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agriculture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Military5Coin.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Military2Coin.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MilitaryCoin.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mausolee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jardins Suspendus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grande Bibliotheque.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grand Phare.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colosse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circus Maximus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Temple Artemis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Via Appia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Statue Zeus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sphinx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pyramide.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Piree.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
